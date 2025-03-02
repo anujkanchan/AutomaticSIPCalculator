@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>SIP Calculator</h1>
+        <button class="back-btn" onclick="location.href='index.html'">← Back</button>
+
+        <div class="calculator">
+            <label for="sipAmount">Monthly Investment (₹):</label>
+            <input type="number" id="sipAmount" placeholder="Enter SIP amount">
+
+            <label for="annualRate">Exp. Annual Returns (%):</label>
+            <input type="number" id="annualRate" placeholder="Enter annual rate">
+
+            <label for="duration">Investment Duration (Years):</label>
+            <input type="number" id="duration" placeholder="Enter duration">
+
+            <!-- Calculate and Reset Buttons -->
+            <button type="button" class="btn" onclick="calculateSIP()">Calculate</button>
+            <button type="button" class="btn" id="resetBtn">Reset</button>
+
+            <h2 id="result">Maturity Amount: ₹0</h2>
+
+            <!-- Chart Container -->
+            <canvas id="sipChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
